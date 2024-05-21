@@ -1,0 +1,58 @@
+{
+	"folders": [
+		{
+			"name": "eureka",
+			"path": "naming-server"
+		},
+		{
+			"path": "api-gateway"
+		},
+		{
+			"path": "security-ms"
+		},
+		{
+			"path": "loyalty-backend"
+		},
+		{
+			"path": "club-backend"
+		},
+	],
+	"settings": {
+		"launch": {
+
+			"version": "0.2.0",
+			"configurations": [
+			
+
+
+			],
+			"compounds": [
+				{
+					"name": "Correr todo",
+					"configurations": [
+						"Spring Boot-NamingServerApplication<naming-server>",
+						{
+							"folder": "api-gateway",
+							"name": "Spring Boot-ApiGatewayApplication<api-gateway>"
+						},
+						
+						{
+							"folder": "club-backend",
+							"name": "Spring Boot-FacadeConfig<Club>"
+						},
+						{
+							"folder": "security-ms",
+							"name": "Spring Boot-SecurityApplication<security>"
+						},
+						{
+							"folder": "loyalty-backend",
+							"name": "Spring Boot-LoyaltyApplication<loyalty>"
+						},
+					]
+				}
+			]
+		},
+		"java.configuration.updateBuildConfiguration": "automatic",
+		"java.compile.nullAnalysis.mode": "automatic"
+	}
+}
